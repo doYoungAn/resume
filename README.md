@@ -30,6 +30,7 @@ https://hyorim.toysmythiot.com
 - Typescript를 사용하여 Frontend는 React 사용
 - Typescript를 사용하여 Backend는 Node.js 기반 Express 프레임워크 사용
 - DB를 통해 정보를 전달하여 디바이스 컨트롤 기능 개발
+- 기상청 API를 사용하여 cron job로 해당 지역의 기온, 강수량 데이터 축적
 - 실제 서비스는 docker swarm으로 서비스
 - 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 -> swarm에 올리는 작업까지 자동화
 
@@ -46,9 +47,17 @@ https://gangneung.toysmythiot.com
     - Line Chart, bar Chart 구현
 - GraphQL을 사용하여 비슷한 종류의 API 묶어서 개발
 - DB를 통해 정보를 전달하여 디바이스 컨트롤 기능 개발
+- 기상청 API를 사용하여 cron job로 해당 지역의 기온, 강수량 데이터 축적
 - Jest를 사용하여 Backend 테스트 자동화
 - 실제 서비스는 docker swarm으로 서비스
 - 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 -> swarm에 올리는 작업까지 자동화
+
+#### 이슈 및 해결
+- MySQL row 양이 많아 쿼리가 느렸다.
+    - 로딩 컴포넌트를 만들어 frontend에 적용
+    - 테이블 인덱스 추가
+- MYSQL row데이터를 일단위, 월단위로 묶어서 저장해야 했다.
+    - cron job을 등록하여 일 00시, 월 1일 00시에 동작하도록 설정
 
 ### 녹사평 유류감지 정화사업 대시보드
 `토이스미스 | 웹 프론트엔드, 백엔드 개발 | 2020.03 ~ now`
@@ -79,6 +88,9 @@ https://suwon.toysmythiot.com
 - 차트에 대해 한눈에 보여야 된다는 기능 필요
     - 차트에 마우스 이벤트 추가 (hover)
 
+#### 보완해야 할점
+- d3.js 를 사용하면서 공통으로 사용되는 append('svg') 혹은 append('g').attr('transform', `translate(${}, ${})`) 코드등이 각 차트마다 중복으로 사용됨 해당 부분을 하나의 함수로 묶어야 함
+
 ## 하트비트 대시보드
 `토이스미스 | 웹 프론트엔드, 벡엔드 개발 | 2019.03 ~ `
 
@@ -98,18 +110,22 @@ https://suwon.toysmythiot.com
     - 대시보드 상에서 로딩 추가
     - 테이블 인덱싱 추가
 
-#### 보완점
+#### 보완해야 할점
+- Sidebar 를 열고 닫으면서 차트의 Resize를 해주어야 한다.
 
 
-## IotGateway Validator
+## IotGateway CLI
 `토이스미스 | CLI 개발 | 2019.10 ~ 2019.11`
 
-사내에서 MongoDB를 도입하면서 Collection에 Document를 저장할 때 각각의 Collection 마다 Validator를 관리 할 수 있게 도와주는 프로그램.  
-하나의 repo를 사용해서 Validator이 정의된 json 파일들을 관리가 가능하다.
+사내에서 MongoDB를 도입하면서 만든 CLI 프로그램.  
+MongoDB Validator 등록, User 리스트 보기, 각 커넥션 리스트 보기 기능, DB에 정의된 role 리스트 보기 기능이 있다.
 
 #### 개발
 - Typescript를 사용하여 Node.js 기반으로 개발
-- gitlab v3 api를 사용하여 repo에 있는 Validator이 정의된 json 파일을 불러와 DB command를 사용하여 적용
+- [commander](https://www.npmjs.com/package/commander) 를 사용하여 개발
+- gitlab v4 api를 사용하여 repo에 있는 Validator이 정의된 json 파일을 불러와 DB command를 사용하여 적용
+- DB command를 사용하여 User 리스트, 커넥션 리스트, roles 을 가져와서 보여준다.
+- CLI 사용할때 MongoDB user, password 인자로 넣어주게 개발
 
 #### 보완해야 할 점
 - gitlab이 private 이므로 api를 사용할때 필요한 토큰에 대한 관리를 cli 실행할 때 인자로 넣어주게 바꾸어야 한다. 
