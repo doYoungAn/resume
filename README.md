@@ -171,8 +171,7 @@ MongoDB Validator 등록, User 리스트 보기, 각 커넥션 리스트 보기 
 - Typescript를 사용하여 Frontend는 Vue.js 프레임워크 사용
 - Typescript를 사용하여 Backend는 Node.js 기반 Express 프레임워크 사용
 - 결제 관련 내용은 세틀뱅크 PG 사를 이용하여 연동
-- 실제 서비스는 AWS S3에 올려 ClountFront로 연동
-- frontend 배포는 gulp를 사용하여 AWS S3에 업로드
+- frontend 배포는 gulp를 사용하여 AWS S3에 업로드 자동화
 - Backend 배포는 EC2에서 pm2로 배포
 
 ## 위니플 서비스
