@@ -47,6 +47,7 @@ https://hyorim.toysmythiot.com
 #### 개발
 - Typescript를 사용하여 Frontend는 React 사용
 - Typescript를 사용하여 Backend는 Node.js 기반 Express 프레임워크 사용
+- three.js를 사용하여 heat map 개발
 - DB를 통해 정보를 전달하여 디바이스 컨트롤 기능 개발
 - 기상청 API를 사용하여 cron job로 해당 지역의 기온, 강수량 데이터 축적
 - 실제 서비스는 docker swarm으로 서비스
