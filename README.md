@@ -19,10 +19,9 @@
 # 프로젝트
 
 ## 정화 사업 대시보드
----
 
 ### 인덕원 정화사업 대시보드
-`토이스미스 | 웹 프론트엔드, 백엔드 개발 | 2019.03 ~ `
+`토이스미스 | 웹 프론트엔드, 백엔드 개발 | 2019.03 ~ now`
 
 #### 주소
 https://hyorim.toysmythiot.com
@@ -52,7 +51,7 @@ https://gangneung.toysmythiot.com
 - 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 -> swarm에 올리는 작업까지 자동화
 
 ### 녹사평 유류감지 정화사업 대시보드
-`토이스미스 | 웹 프론트엔드, 백엔드 개발 | 2020.03 ~ `
+`토이스미스 | 웹 프론트엔드, 백엔드 개발 | 2020.03 ~ now`
 
 #### 개발
 - Typescript를 사용하여 Frontend는 React 사용
@@ -75,6 +74,12 @@ https://suwon.toysmythiot.com
 - 실제 서비스는 docker swarm으로 서비스
 - 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 -> swarm에 올리는 작업까지 자동화
 
+#### 이슈 및 해결
+- 한 페이지에서 보여주어야 하는 것을 초점으로 맞추어 페이지 이동 대신 모달 필요
+    - Vue Plugin 형식으로 만들어 모달을 추가하는 기능 개발
+- 차트에 대해 한눈에 보여야 된다는 기능 필요
+    - 차트에 마우스 이벤트 추가 (hover)
+
 ## 하트비트 대시보드
 ---
 `토이스미스 | 웹 프론트엔드, 벡엔드 개발 | 2019.03 ~ `
@@ -88,21 +93,28 @@ https://suwon.toysmythiot.com
 - 실제 서비스는 docker swarm으로 서비스
 - 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 -> swarm에 올리는 작업까지 자동화
 
+#### 이슈 및 해결
+- 새로고침시 다시 검색해야 되는 번거로움이 있다.
+    - url query로 키값, 날짜값등을 가지고 있어서 url이 바뀔때 api 호출 하는 방식으로 변경
+- Mysql row 데이터가 많아서 쿼리의 속도가 느리다.
+    - 대시보드 상에서 로딩 추가
+    - 테이블 인덱싱 추가
+
+#### 보완점
+
 
 ## IotGateway Validator
 ---
 `토이스미스 | CLI 개발 | 2019.10 ~ 2019.11`
 
-사내에서 MongoDB를 도입하면서 Collection에 Document를 저장할 때 각각의 Collection 마다 Validator를 관리 할 수 있게 도와주는 프로그램
+사내에서 MongoDB를 도입하면서 Collection에 Document를 저장할 때 각각의 Collection 마다 Validator를 관리 할 수 있게 도와주는 프로그램.  
+하나의 repo를 사용해서 Validator이 정의된 json 파일들을 관리가 가능하다.
 
 #### 개발
 - Typescript를 사용하여 Node.js 기반으로 개발
 - gitlab v3 api를 사용하여 repo에 있는 Validator이 정의된 json 파일을 불러와 DB command를 사용하여 적용
 
-#### 이점
-- 하나의 repo에서 Validator를 관리 할 수 있어 팀내 누구나 pull request를 사용하여 쉽게 동기화 할 수 있다. 
-
-#### 보완점
+#### 보완해야 할 점
 - gitlab이 private 이므로 api를 사용할때 필요한 토큰에 대한 관리를 cli 실행할 때 인자로 넣어주게 바꾸어야 한다. 
 
 
