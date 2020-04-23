@@ -1,4 +1,9 @@
-# 소개
+# Preview
+<img src="https://avatars0.githubusercontent.com/u/31813858?s=400&u=e5797f22f49c9270e4f6d1e71d9933d65cd7321a&v=4" width=200>
+
+- 안도영
+- email - jispoop@gmail.com
+- github - https://github.com/doYoungAn
 
 
 # 경력
