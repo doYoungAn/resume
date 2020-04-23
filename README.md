@@ -5,6 +5,9 @@
 - email - jispoop@gmail.com
 - github - https://github.com/doYoungAn
 
+개발자라고 하면 공부의 최전선에 있어야 된다고 생각합니다.  
+ 개발자가 학습하는 이유는 비지니스 가치를 구현하는데 필요한 기술을 가려내는 눈이 필요하기 때문입니다. 
+
 
 # 경력
 - 토이스미스 (재직중)
