@@ -32,7 +32,7 @@ https://hyorim.toysmythiot.com
 - DB를 통해 정보를 전달하여 디바이스 컨트롤 기능 개발
 - 기상청 API를 사용하여 cron job로 해당 지역의 기온, 강수량 데이터 축적
 - 실제 서비스는 docker swarm으로 서비스
-- 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 -> swarm에 올리는 작업까지 자동화
+- 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 후 swarm에 올리는 작업까지 자동화
 
 ### 강릉 마그네슘 정화사업 대시보드
 `토이스미스 | 웹 프론트엔드, 백엔드 개발 | 2019.07 ~ 2019.11`
@@ -50,7 +50,7 @@ https://gangneung.toysmythiot.com
 - 기상청 API를 사용하여 cron job로 해당 지역의 기온, 강수량 데이터 축적
 - Jest를 사용하여 Backend 테스트 자동화
 - 실제 서비스는 docker swarm으로 서비스
-- 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 -> swarm에 올리는 작업까지 자동화
+- 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 후 swarm에 올리는 작업까지 자동화
 
 #### 이슈 및 해결
 - MySQL row 양이 많아 쿼리가 느렸다.
@@ -80,7 +80,7 @@ https://suwon.toysmythiot.com
 - D3.js를 사용하여 방문자 등등의 데이터 시각화
     - Line Chart, Bar Chart, Dount Chart 구현
 - 실제 서비스는 docker swarm으로 서비스
-- 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 -> swarm에 올리는 작업까지 자동화
+- 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 후 swarm에 올리는 작업까지 자동화
 
 #### 이슈 및 해결
 - 한 페이지에서 보여주어야 하는 것을 초점으로 맞추어 페이지 이동 대신 모달 필요
@@ -90,28 +90,6 @@ https://suwon.toysmythiot.com
 
 #### 보완해야 할점
 - d3.js 를 사용하면서 공통으로 사용되는 append('svg') 혹은 append('g').attr('transform', `translate(${}, ${})`) 코드등이 각 차트마다 중복으로 사용됨 해당 부분을 하나의 함수로 묶어야 함
-
-## 하트비트 대시보드
-`토이스미스 | 웹 프론트엔드, 벡엔드 개발 | 2019.03 ~ `
-
-사내에서 내보낸 디바이스들에 대한 정보를 쉽게 볼 수 있는 요구가 있었습니다. 디바이스가 언제 살아 있었는지 어떤 정보를 보내는 지에 대한 정보를 보여주는 대시보드입니다.
-
-#### 개발
-- Typescript를 사용하여 Frontend는 React 프레임워크 사용
-- Typescript를 사용하여 Backend를 Node.js 기반 Express 프레임워크 사용
-- D3.js를 사용하여 디바이스 생존 시간 시각화 - Timeline 구현
-- 실제 서비스는 docker swarm으로 서비스
-- 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 -> swarm에 올리는 작업까지 자동화
-
-#### 이슈 및 해결
-- 새로고침시 다시 검색해야 되는 번거로움이 있다.
-    - url query로 키값, 날짜값등을 가지고 있어서 url이 바뀔때 api 호출 하는 방식으로 변경
-- Mysql row 데이터가 많아서 쿼리의 속도가 느리다.
-    - 대시보드 상에서 로딩 추가
-    - 테이블 인덱싱 추가
-
-#### 보완해야 할점
-- Sidebar 를 열고 닫으면서 차트의 Resize를 해주어야 한다.
 
 
 ## IotGateway CLI
@@ -129,6 +107,29 @@ MongoDB Validator 등록, User 리스트 보기, 각 커넥션 리스트 보기 
 
 #### 보완해야 할 점
 - gitlab이 private 이므로 api를 사용할때 필요한 토큰에 대한 관리를 cli 실행할 때 인자로 넣어주게 바꾸어야 한다. 
+
+
+## 하트비트 대시보드
+`토이스미스 | 웹 프론트엔드, 벡엔드 개발 | 2019.03 ~ now`
+
+사내에서 내보낸 디바이스들에 대한 정보를 쉽게 볼 수 있는 요구가 있었습니다. 디바이스가 언제 살아 있었는지 어떤 정보를 보내는 지에 대한 정보를 보여주는 대시보드입니다.
+
+#### 개발
+- Typescript를 사용하여 Frontend는 React 프레임워크 사용
+- Typescript를 사용하여 Backend를 Node.js 기반 Express 프레임워크 사용
+- D3.js를 사용하여 디바이스 생존 시간 시각화 - Timeline 구현
+- 실제 서비스는 docker swarm으로 서비스
+- 배포는 gitlab CI/CD 를 사용하여 Frontend, Backend 빌드 후 docker 이미지 생성 후 swarm에 올리는 작업까지 자동화
+
+#### 이슈 및 해결
+- 새로고침시 다시 검색해야 되는 번거로움이 있다.
+    - url query로 키값, 날짜값등을 가지고 있어서 url이 바뀔때 api 호출 하는 방식으로 변경
+- Mysql row 데이터가 많아서 쿼리의 속도가 느리다.
+    - 대시보드 상에서 로딩 추가
+    - 테이블 인덱싱 추가
+
+#### 보완해야 할점
+- Sidebar 를 열고 닫으면서 차트의 Resize를 해주어야 한다.
 
 
 ## 티켓바이
