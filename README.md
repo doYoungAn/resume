@@ -16,6 +16,19 @@
     - Frontend Developer
     - 기간 2017.03 ~ 2019.03 (2년)
 
+# 보유 기술
+
+## Frontend
+- 자주 사용하는 언어는 Typescript, Javascript 입니다.
+- React 라이브러리, Vue.JS 프레임워크에 익숙합니다.
+- Redux, Vuex, Ngrx 구조에 익숙합니다.
+- css, scss를 자주 사용합니다.
+
+## DevOps
+- Docker을 자주 사용합니다.
+- docker-compose을 사용해서 여러개의 docker image를 관리할 수 있습니다.
+- gitlab CI/CD에 익숙합니다.
+
 # 프로젝트
 
 ## 정화 사업 대시보드
