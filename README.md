@@ -119,7 +119,7 @@ https://suwon.toysmythiot.com
     - 차트에 마우스 이벤트 추가 (hover)
 
 #### 보완해야 할점
-- d3.js 를 사용하면서 공통으로 사용되는 append('svg') 혹은 append('g').attr('transform', `translate(${}, ${})`) 코드등이 각 차트마다 중복으로 사용됨 해당 부분을 하나의 함수로 묶어야 함
+- d3.js 를 사용하면서 공통으로 사용되는 append('svg') 혹은 append('g').attr('transform', \`translate(${}, ${})\`) 코드등이 각 차트마다 중복으로 사용됨 해당 부분을 하나의 함수로 묶어야 함
 
 
 ## IotGateway CLI
