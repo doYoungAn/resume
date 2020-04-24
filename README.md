@@ -37,6 +37,8 @@
 <img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" width="30" height="30" align="left"/>
 <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" width="30" height="30" align="left"/>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" width="30" height="30" align="left" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" width="30" height="30" align="left" />
+<img src="https://cdn.clipart.email/9924122f6a73b517e96ffaced1f2ac9b_download-icon-css-3-svg-eps-png-psd-ai-logo-vector-color-free-el-_1141-1600.png" width="30" height="30" align="left" />
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1920px-Sass_Logo_Color.svg.png" width="30" height="30" align="left"/>
 <img src="https://raw.githubusercontent.com/webpack/media/master/logo/icon-square-big.png" width="30" height="30" />
   
