@@ -33,12 +33,13 @@
 # 보유 기술
 
 ## Frontend
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width=30 height=30 />  
-<img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" width=30 height=30/>
-<img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" width=30 height=30/>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" width=30 height=30/>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1920px-Sass_Logo_Color.svg.png" width=30 height=30/>
-<img src="https://raw.githubusercontent.com/webpack/media/master/logo/icon-square-big.png" width=30 height=30/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="30" height="30" align="left"/>  
+<img src="https://cdn.worldvectorlogo.com/logos/typescript.svg" width="30" height="30" align="left"/>
+<img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" width="30" height="30" align="left"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" width="30" height="30" align="left" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1920px-Sass_Logo_Color.svg.png" width="30" height="30" align="left"/>
+<img src="https://raw.githubusercontent.com/webpack/media/master/logo/icon-square-big.png" width="30" height="30" />
+  
 
 - 자주 사용하는 언어는 Typescript, Javascript 입니다.
 - React 라이브러리, Vue.JS 프레임워크에 익숙합니다.
@@ -47,9 +48,9 @@
 - create-react-app과 같은 CLI 말고 커스텀으로 webpack을 설정해서 작업하는데 익숙합니다.
 
 ## DevOps
-<img src="https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png" width=30 height=30/>
-<img src="https://miro.medium.com/max/368/1*SpNSwog-tYeTXn2bEn2_RQ.png" width=30 height=30/>
-<img src="https://about.gitlab.com/images/ci/gitlab-ci-cd-logo_2x.png" width=30 height=30/>
+<img src="https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png" width="30" height="30" align="left" />
+<img src="https://miro.medium.com/max/368/1*SpNSwog-tYeTXn2bEn2_RQ.png" width="30" height="30" align="left" />
+<img src="https://about.gitlab.com/images/ci/gitlab-ci-cd-logo_2x.png" width="30" height="30" />
 
 - Docker을 자주 사용합니다.
 - docker-compose을 사용해서 여러개의 docker container들을 관리할 수 있습니다.
